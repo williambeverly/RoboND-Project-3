@@ -104,50 +104,50 @@ def visualise_clusters(cluster_indices, white_cloud):
 # Callback function for your Point Cloud Subscriber
 def pcl_callback(pcl_msg):
 
-    # TODO: Convert ROS msg to PCL data
+    # DONE: Convert ROS msg to PCL data
     img = ros_to_pcl(pcl_msg)
 
-    # TODO: Voxel Grid Downsampling
+    # DONE: Voxel Grid Downsampling
     img = voxel_grid_downsample(img)
 
-    # TODO: PassThrough Filter
+    # DONE: PassThrough Filter
     img = passthrough_filter(img, 'z', 0.6, 1.1)
 
-    # TODO: RANSAC Plane Segmentation
-    # TODO: Extract inliers and outliers
+    # DONE: RANSAC Plane Segmentation
+    # DONE: Extract inliers and outliers
     table, objects = extract_outliers_inliers(img)
 
-    # TODO: Euclidean Clustering
+    # DONE: Euclidean Clustering
     white_cloud = XYZRGB_to_XYZ(objects)
     cluster_indices = euclidean_clustering(white_cloud)
     
-    # TODO: Create Cluster-Mask Point Cloud to visualize each cluster separately
+    # DONE: Create Cluster-Mask Point Cloud to visualize each cluster separately
     cluster_cloud = visualise_clusters(cluster_indices, white_cloud)
 
-    # TODO: Convert PCL data to ROS messages
+    # DONE: Convert PCL data to ROS messages
     ros_table = pcl_to_ros(table)
     ros_objects = pcl_to_ros(cluster_cloud)
 
-    # TODO: Publish ROS messages
+    # DONE: Publish ROS messages
     pcl_objects_pub.publish(ros_objects)
     pcl_table_pub.publish(ros_table)
 
 
 if __name__ == '__main__':
 
-    # TODO: ROS node initialization
+    # DONE: ROS node initialization
     rospy.init_node('clustering', anonymous=True)
 
-    # TODO: Create Subscribers
+    # DONE: Create Subscribers
     pcl_sub = rospy.Subscriber("/sensor_stick/point_cloud", pc2.PointCloud2, pcl_callback, queue_size=1)
 
-    # TODO: Create Publishers
+    # DONE: Create Publishers
     pcl_objects_pub = rospy.Publisher("/pcl_objects", PointCloud2, queue_size=1)
     pcl_table_pub = rospy.Publisher("/pcl_table", PointCloud2, queue_size=1)
 
     # Initialize color_list
     get_color_list.color_list = []
 
-    # TODO: Spin while node is not shutdown
+    # DONE: Spin while node is not shutdown
     while not rospy.is_shutdown():
         rospy.spin()
