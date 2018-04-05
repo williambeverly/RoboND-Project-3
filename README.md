@@ -16,7 +16,7 @@
 [image11]: ./imgs/3DPerception/pick1.png
 [image12]: ./imgs/3DPerception/pick2.png
 [image13]: ./imgs/3DPerception/pick3.png
-[image14]: ./imgs/3DPerception/pick3b.png
+[image14]: ./imgs/3DPerception/pick3_b.png
 
 #### Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
