@@ -13,6 +13,10 @@
 [image8]: ./imgs/Exercise2/segmented_table.png
 [image9]: ./imgs/Exercise3/normalised_confusion.png
 [image10]: ./imgs/Exercise3/object_recognition.png
+[image11]: ./imgs/3DPerception/pick1.png
+[image12]: ./imgs/3DPerception/pick2.png
+[image13]: ./imgs/3DPerception/pick3.png
+[image14]: ./imgs/3DPerception/pick3b.png
 
 #### Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
@@ -70,5 +74,21 @@ Please refer to [object_recognition.py](./Exercise3/object_recognition.py) for t
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
+For the provided output_x.yaml files, please see [output_1.yaml](./output_1.yaml), [output_2.yaml](./output_2.yaml) and [output_3.yaml](./output_3.yaml). For the 3D perception pipeline, please refer to [project_template.py](./project_template.py). The following images demonstrate the effectiveness of the pipeline.
 
+1. World 1 (3/3 objects detected)
+
+![image11]
+
+2. World 2 (5/5 objects detected)
+
+![image12]
+
+3. World 3 (8/8 objects detected)
+
+![image13]
+
+As well as the top view for World 3, as the labels are starting to become difficult to distinguish from the front view.
+
+![image14]
 
