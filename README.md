@@ -46,11 +46,11 @@ Please refer to [segmentation.py](./Exercise2/segmentation.py) for the completed
 
 ![image6]
 
-2. Published point cloud from pcl_objects topic
+2. Published point cloud from pcl_objects topic after segmentation
 
 ![image7]
 
-3. Published point cloud from pcl_table topic
+3. Published point cloud from pcl_table topic after segmentation
 
 ![image8]
 
