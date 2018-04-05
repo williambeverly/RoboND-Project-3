@@ -62,18 +62,13 @@ The normalized confusion matrix is shown below:
 
 ![image9]
 
-Please refer to [object_recognition.py](./Exercise3/object_recognition.py) for the completed object reg The generated model.sav file was generated, saved and loaded into the model. The output of the detected objects with their associated labels are shown below:
+Please refer to [object_recognition.py](./Exercise3/object_recognition.py) for the completed object recognition implementation. The model.sav file was generated, saved and loaded into the model. The output of the detected objects with their associated labels are shown below:
 
 ![image10]
 
 ### Pick and Place Setup
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
-
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
-
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
 
 
 
