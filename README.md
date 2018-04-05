@@ -56,7 +56,7 @@ Please refer to [segmentation.py](./Exercise2/segmentation.py) for the completed
 ![image8]
 
 #### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-For the features extraction for compute_color_histograms() and compute_normal_histograms() please refer to [features.py](./Exercise3/features.py). For the color histograms, 64 bins were utilised with the range set to 0 to 256. For the normal histograms, 32 bins were utilised, with the range set to 0 to 256. For each object, 50 iterations were utilised to capture the feature vectors. The SVM was trained using a linear kernel and HSV was utilised.
+For the features extraction for compute_color_histograms() and compute_normal_histograms() please refer to [features.py](./Exercise3/features.py). For the color histograms, 64 bins were utilised with the range set to 0 to 256. For the normal histograms, 32 bins were utilised, with the range set to 0 to 256. For each object, 50 iterations were utilised to capture the feature vectors. The SVM was trained using a linear kernel and HSV was utilised and [capture_features.py](./Exercise3/capture_features.py) has been included for reference purposes.
 
 The normalized confusion matrix is shown below:
 
