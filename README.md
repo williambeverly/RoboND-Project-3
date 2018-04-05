@@ -21,14 +21,23 @@ You are reading it! For Exercise 1, 2 and 3, the code has been included in subfo
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 Please refer to [RANSAC.py](./Exercise1/RANSAC.py) for the completed code for Exercise 1. The required steps are graphically presented below:
 1. Initial point cloud for tabletop (note .pcd not included in repository)
+
 ![image1]
+
 2. Point cloud after Voxel grid downsampling
+
 ![image2]
+
 3. Point cloud after Pass through filtering applied to the z-axis
+
 ![image3]
+
 4. Point cloud of extracted inliers (table only)
+
 ![image4]
+
 5. Point cloud of extracted outliers (objects only)
+
 ![image5]
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
