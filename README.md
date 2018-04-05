@@ -8,12 +8,12 @@
 [image3]: ./imgs/Exercise1/passthrough.png
 [image4]: ./imgs/Exercise1/inliers.png
 [image5]: ./imgs/Exercise1/outliers.png
-[image6]: ./imgs/r3_6_calcs.png
-[image7]: ./imgs/testcase_1.png
-[image8]: ./imgs/display_path.png
+[image6]: ./imgs/Exercise2/point_cloud.png
+[image7]: ./imgs/Exercise2/segmented_objects.png
+[image8]: ./imgs/Exercise2/segmented_table.png
 [image9]: ./imgs/complete.png
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
+#### Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
 You are reading it! For Exercise 1, 2 and 3, the code has been included in subfolders.
 
@@ -41,8 +41,20 @@ Please refer to [RANSAC.py](./Exercise1/RANSAC.py) for the completed code for Ex
 ![image5]
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
+Please refer to [segmentation.py](./Exercise2/segmentation.py) for the completed code for Exercise 2. The graphical outputs from three topics are shown below:
+1. Subscribed initial point cloud topic
 
-#### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
+![image6]
+
+2. Published point cloud from pcl_objects topic
+
+![image7]
+
+3. Published point cloud from pcl_table topic
+
+![image8]
+
+#### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 Here is an example of how to include an image in your writeup.
 
 ![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
