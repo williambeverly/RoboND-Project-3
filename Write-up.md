@@ -1,10 +1,9 @@
 ## Project: Perception Pick & Place
----
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
-You are reading it!
+You are reading it! For Exercise 1, 2 and 3, the code has been included in subfolders.
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
