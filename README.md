@@ -11,7 +11,8 @@
 [image6]: ./imgs/Exercise2/point_cloud.png
 [image7]: ./imgs/Exercise2/segmented_objects.png
 [image8]: ./imgs/Exercise2/segmented_table.png
-[image9]: ./imgs/complete.png
+[image9]: ./imgs/Exercise3/normalised_confusion.png
+[image10]: ./imgs/Exercise3/object_recognition.png
 
 #### Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
@@ -55,9 +56,15 @@ Please refer to [segmentation.py](./Exercise2/segmentation.py) for the completed
 ![image8]
 
 #### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
+For the features extraction for compute_color_histograms() and compute_normal_histograms() please refer to [features.py](./Exercise3/features.py). For the color histograms, 64 bins were utilised with the range set to 0 to 256. For the normal histograms, 32 bins were utilised, with the range set to 0 to 256. For each object, 50 iterations were utilised to capture the feature vectors. The SVM was trained using a linear kernel and HSV was utilised.
 
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+The normalized confusion matrix is shown below:
+
+![image9]
+
+Please refer to [object_recognition.py](./Exercise3/object_recognition.py) for the completed object reg The generated model.sav file was generated, saved and loaded into the model. The output of the detected objects with their associated labels are shown below:
+
+![image10]
 
 ### Pick and Place Setup
 
