@@ -1,12 +1,35 @@
 ## Project: Perception Pick & Place
 ### Writeup / README
 
+[//]: # (Image References)
+
+[image1]: ./imgs/Exercise1/tabletop.png
+[image2]: ./imgs/Exercise1/downsampled.png
+[image3]: ./imgs/Exercise1/passthrough.png
+[image4]: ./imgs/Exercise1/inliers.png
+[image5]: ./imgs/Exercise1/outliers.png
+[image6]: ./imgs/r3_6_calcs.png
+[image7]: ./imgs/testcase_1.png
+[image8]: ./imgs/display_path.png
+[image9]: ./imgs/complete.png
+
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
 
 You are reading it! For Exercise 1, 2 and 3, the code has been included in subfolders.
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
+Please refer to for the completed code for Exercise 1. The following steps are graphically presented below:
+1. Initial point cloud for tabletop
+![image1]
+2. Downsampled point cloud
+![image2]
+3. Passthrough point cloud
+![image3]
+4. Table inliers
+![image4]
+5. Object outliers
+![image5]
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 
