@@ -74,7 +74,7 @@ Please refer to [object_recognition.py](./Exercise3/object_recognition.py) for t
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-For the provided output_x.yaml files, please see [output_1.yaml](./output_1.yaml), [output_2.yaml](./output_2.yaml) and [output_3.yaml](./output_3.yaml). For the 3D perception pipeline, please refer to [project_template.py](./project_template.py). The following images demonstrate the effectiveness of the pipeline.
+For the provided output_x.yaml files, please see [output_1.yaml](./output_1.yaml), [output_2.yaml](./output_2.yaml) and [output_3.yaml](./output_3.yaml). For the 3D perception pipeline, please refer to [project_template.py](./project_template.py). The model.sav was trained on the objects in world_3 and utilised across all worlds for detection. The following images demonstrate the effectiveness of the pipeline.
 
 1. World 1 (3/3 objects detected)
 
@@ -92,3 +92,6 @@ As well as the top view for World 3, as the labels are starting to become diffic
 
 ![image14]
 
+### Conclusion
+
+This concludes the project for a passing submission. As a note to myself, I had to pass through filter in the x-axis (in addition to z) to trim out the side boxes, as these were being detected. I was originally utilising normals in the range of (-1.0, 1.0) - however when doing this, it made my detection worse, so I changed it back to (0, 256). I would like to improve the robustness of detection to try and avoid misclasification - this occured about 10% of the time in world 3, where the glue would be misclassified as sticky_notes. Perhaps I shall implement some deep learning!
