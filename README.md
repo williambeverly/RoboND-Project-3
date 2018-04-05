@@ -19,7 +19,7 @@ You are reading it! For Exercise 1, 2 and 3, the code has been included in subfo
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
-Please refer to for the completed code for Exercise 1. The following steps are graphically presented below:
+Please refer to [RANCAS.py](./Exercise1/RANSAC.py) for the completed code for Exercise 1. The following steps are graphically presented below:
 1. Initial point cloud for tabletop
 ![image1]
 2. Downsampled point cloud
