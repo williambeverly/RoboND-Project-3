@@ -60,7 +60,7 @@ Please refer to [segmentation.py](./Exercise2/segmentation.py) for the completed
 ![image8]
 
 #### 3. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-For the features extraction for compute_color_histograms() and compute_normal_histograms() please refer to [features.py](./Exercise3/features.py). For the color histograms, 64 bins were utilised with the range set to 0 to 256. For the normal histograms, 32 bins were utilised, with the range set to 0 to 256. For each object, 50 iterations were utilised to capture the feature vectors. The SVM was trained using a linear kernel and HSV was utilised and [capture_features.py](./Exercise3/capture_features.py) has been included for reference purposes.
+For the features extraction for compute_color_histograms() and compute_normal_histograms() please refer to [features.py](./Exercise3/features.py). For the color histograms, 64 bins were utilised with the range set to 0 to 256. For the normal histograms, 32 bins were utilised, with the range set to -1.0 to 1.0. For each object, 50 iterations were utilised to capture the feature vectors. The SVM was trained using a sigmoid kernel and HSV was utilised and [capture_features.py](./Exercise3/capture_features.py) has been included for reference purposes.
 
 The normalized confusion matrix is shown below:
 
@@ -80,11 +80,11 @@ For the provided output_x.yaml files, please see [output_1.yaml](./output_1.yaml
 
 ![image11]
 
-2. World 2 (5/5 objects detected)
+2. World 2 (4/5 objects detected)
 
 ![image12]
 
-3. World 3 (8/8 objects detected)
+3. World 3 (6/8 objects detected)
 
 ![image13]
 
@@ -92,6 +92,12 @@ As well as the top view for World 3, as the labels are starting to become diffic
 
 ![image14]
 
+### Changes for second submission
+
+In my first submission, I noted that utilising normals histogram function and using the correct range of (-1.0, 1.0) worsened my detection. Therefore, I changed the range back to (0, 256) and had 100% detection in my pick worlds. Please note that in my second submission, I have changed it back to (-1.0, 1.0). Previously, when utilising the range of (0, 256) for my normals, it ignored the negative values, and also binned all values into a single bin (as they ranged between 0 to 1). As a result, the normal histograms were not providing information that was helpful in training the SVM to classify objects. Therefore, I assume that that the classification of objects by the SVM was dependent on colour.
+
+By introducing the normals histogram, the detection of objects changed from 100% in all worlds to 100%, 80% and 75% in worlds 1, 2 and 3 respectively, therefore worsening my detection. I also read references to this on the perception Slack channel. Therefore, the object classification seemed to be better based only on colour. Therefore, I assume that the randomly generated rotation of objects in the training set causes more variation in the normals histogram distribution across x, y and z, than the colour histogram. In this case, colour should be more indepedent of rotation, given that each object is fairly uniform in colour. I assume that the SVM was unable to accurately utilise the normals histogram data to increase the fit on the data. It could be that the SVM hyper-parameters need to be further tweaked, or that I could attempt to decouple the rotation of the object through other techniques.
+
 ### Conclusion
 
-This concludes the project for a passing submission. As a note to myself, I had to pass through filter in the x-axis (in addition to z) to trim out the side boxes, as these were being detected. I was originally utilising normals in the range of (-1.0, 1.0) - however when doing this, it made my detection worse, so I changed it back to (0, 256). I would like to improve the robustness of detection to try and avoid misclasification - this occured about 10% of the time in world 3, where the glue would be misclassified as sticky_notes. Perhaps I shall implement some deep learning!
+This concludes the project for a passing submission. As a note to myself, I had to pass through filter in the x-axis (in addition to z) to trim out the side boxes, as these were being detected.
